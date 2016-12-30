@@ -14,6 +14,42 @@
 <body style="min-width:1000px;background-color:#81DAF5">
 <a id="top">
 
+<script>
+var i=1;j=1;k=0;n;
+function imgchangenext(){
+							i++;					
+							if(i>7)
+							{i=1;}
+							document.getElementById('demo').setAttribute('src','image/'+i+'.jpg');
+						}
+function imgchangeprevious()
+						{
+							i--;
+							if(i<1)
+							{i=7;}
+							document.getElementById('demo').setAttribute('src','image/'+i+'.jpg');
+						}
+function imgchangeshow(){
+							j++;					
+							if(j>4)
+							{j=1;}
+							document.getElementById('demo2').setAttribute('src','image/b'+j+'.png');
+						}
+function showimg()	{
+						if(k==0)
+						{	
+							n=setInterval(imgchangeshow,1800);
+							k=1;
+						}
+						else
+						{
+							clearInterval(n);
+							k=0;
+						}
+					} 
+
+</script>
+
 <div id="header" style="height:300px;
 background-image:url(image/head.jpg);
 background-position:right top;
@@ -22,7 +58,7 @@ background-repeat:no-repeat;">
 <h1 style="margin:0px">聲之形</h1>
 </div>
 
-<div id="menu" style="float:left;width:300px;height:900px;">
+<div id="menu" style="float:left;width:300px;height:1000px;">
 	<h1 style="margin:0px" class="menucenter">
 	<br><a href="index.html" class="menulink">簡介</a></strong></h1>
 	<h1 class="menucenter"><strong><a href="content2.html" class="menulink">故事標題由來</a></strong></h1>
@@ -34,15 +70,19 @@ background-repeat:no-repeat;">
 	<h1 class="menucenter"><strong><a href="content8.html" class="menulink">宣傳映像PV</a> </strong></h1>
 </div>
 
-<div style="float:right;width:300px;height:900px">
-	<div style="height:430px">
+<div style="float:right;width:300px;height:1000px">
+	<div style="height:500px">
 		<h1 style="margin:0px"></h1>
-		<img src="image/1.jpg" height="430" width="300">
+		<img id="demo" src="image/1.jpg" height="450" width="300">
+		點擊按鈕切換圖片
+		<button type="button" onclick="imgchangeprevious()">上一張</button>
+		<button type="button" onclick="imgchangenext()">下一張</button>
 	</div>
 	
-	<div style="height:430px">
-		<h2 style="margin:0px"></h2>
-		<img src="image/2.png" height="430" width="300">
+	<div style="height:500px">
+		<h2 style="margin:-20px"></h2>
+		<img id="demo2" src="image/b1.png" height="450" width="300" onclick="showimg()">點擊圖片啟用/暫停幻燈片
+
 		<div style="float:bottom;position:relative;width:300x;height:25px;overflow:hidden;">   
 			<div style="position:absolute;top:-265px;left:15px">    
 				<iframe width="400" height="300" src="https://www.youtube.com/v/93IYSRhmNG8?rel=0&autoplay=1&loop=1">
@@ -52,7 +92,7 @@ background-repeat:no-repeat;">
 	</div>
 </div>
 
-<div id="content" style="margin:0 auto;width:400px;height:900px;overflow:hidden;">
+<div id="content" style="margin:0 auto;width:400px;height:1000px;overflow:hidden;">
 
 		<h1 style="margin:0px;font-size:100%">
 		<br>
@@ -72,7 +112,8 @@ background-repeat:no-repeat;">
 		在將也昏迷期間重新審視自己和大家的關係，希望代替將也與大家和好繼續製作電影。隨後在某星期二的晚上想到小學時至現在的回憶，並夢見了將也向她道歉並準備前往另一個世界，她驚醒後馬上前往每星期二和將也見面的橋上獨自哭泣。同時在醫院的將也亦醒來前往橋上，兩人心有靈犀的在橋上會面。<br>
 		在橋上兩人坦白心聲，將也不希望她為了以前的事情傷害自己，希望她能給將也活下去的勇氣從小學時對硝子所做的過份事情中得到救贖。最終她亦答應了將也的請求，兩人亦終於得到救贖。<br>
 		後來她為了自己的夢想前往東京，數年後在成人式上與將也重逢，兩人牽著手充滿希望的進入小學會場一起面對過去和未來。
-	</h1>
+		</h1>
+	
 </div>
 
 <div id="footer" style="height:75px;background-color:#a1e3f7">

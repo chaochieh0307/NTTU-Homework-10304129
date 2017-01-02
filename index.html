@@ -81,6 +81,11 @@ background-repeat:no-repeat;">
 	<div style="height:500px">
 		<h1 style="margin:0px"></h1>
 		<a id="demo_1" class="fancybox" rel="group" href="image/1.jpg"><img id="demo" src="image/1.jpg" height="450" width="300"></a>
+		<script>
+		$(document).ready(function() {
+		$(".fancybox").fancybox();
+		});
+		</script>
 		點擊按鈕切換圖片
 		<button type="button" onclick="imgchangeprevious()">上一張</button>
 		<button type="button" onclick="imgchangenext()">下一張</button>
